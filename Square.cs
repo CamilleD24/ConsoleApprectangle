@@ -6,8 +6,17 @@ using System.Threading.Tasks;
 
 namespace ConsoleApprectangle
 {
-    public class Square
+    public class Square : Shape
     {
 
+        public double Side { set; get; }
+        public override double Area()
+        {
+            return Side * Side;
+        }
+        public Square(double side) 
+        {
+            Side = side;
+        }
     }
 }
